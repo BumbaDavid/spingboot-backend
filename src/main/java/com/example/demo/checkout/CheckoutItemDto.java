@@ -6,15 +6,22 @@ public class CheckoutItemDto{
     private int quantity;
     private double price;
     private long id;
+    private String shippingAdress;
+    private String billingAdress;
+    private String deliveryMode;
+
 
 
     public CheckoutItemDto(){}
 
-    public CheckoutItemDto(String productName, int quantity, double price, long id){
+    public CheckoutItemDto(String productName, int quantity, double price, long id, String shippingAdress, String billingAdress, String deliveryMode){
         this.productName = productName;
         this.quantity = quantity;
         this.price = price;
         this.id = id;
+        this.shippingAdress= shippingAdress;
+        this.billingAdress = billingAdress;
+        this.deliveryMode =deliveryMode;
     }
 
     public String getProductName() {
@@ -49,4 +56,27 @@ public class CheckoutItemDto{
         this.id = id;
     }
     
+    public String getShippingAdress(){
+        return shippingAdress;
+    }
+
+    public void setShippingAdress(String shippingAdress){
+        this.shippingAdress = shippingAdress;
+    }
+
+    public String getBillingAdress(){
+        return billingAdress;
+    }
+
+    public void setBillingAdress(String billingAdress){
+        this.billingAdress = billingAdress;
+    }
+
+    public String getDeliveryMode(){
+        return deliveryMode;
+    }
+
+    public void setDeliveryMode(String deliveryMode){
+        this.deliveryMode = deliveryMode;
+    }
 }
